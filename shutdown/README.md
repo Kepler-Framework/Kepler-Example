@@ -1,14 +1,6 @@
-+ 启动Server1-service * 1台，模拟TestApp1    
-+ 启动Server2-service * 1台，模拟TestApp2    
-+ 启动Server3-service * 3台，模拟TestApp3  
-+ 启动Server1-client测试用例，观察结果  
-`此时Server1-client没有标记Tag`    
-+ 关闭其中一台Server3-service，修改/service/src/main/resources/kepler.conf  
-	`com.kepler.host.host.tag=kepler`  
-+ 重新启动该台Server3-service   
-`此时含2台已标记服务与1台已标记服务`  
-+ 修改Server1-client，/client/src/test/resources/kepler.conf  
-	`com.kepler.host.host.tag=kepler`
-+ 启动Server1-client测试用例，观察结果   
-`此时Server1-client已经标记Tag`  
-
++ 启动Service，启动Client  
++ @See[<a href="https://github.com/Kepler-Framework/Kepler-All/wiki/%E7%89%B9%E6%80%A7-%E5%AE%89%E5%85%A8%E5%85%B3%E9%97%AD">安全关闭</a>]Service
++ 观察Log，此时服务将立即关闭并终止正在执行的请求  
++ 启动Service，开启com.kepler.thread.ThreadFactory.shutdown_wait，启动Client
++ @See[<a href="https://github.com/Kepler-Framework/Kepler-All/wiki/%E7%89%B9%E6%80%A7-%E5%AE%89%E5%85%A8%E5%85%B3%E9%97%AD">安全关闭</a>]Service  
++ 观察Log，此时服务将等待线程直到请求执行完成后关闭   
