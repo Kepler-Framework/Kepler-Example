@@ -6,7 +6,7 @@
 + 关闭其中一台Server3-service，修改/service/src/main/resources/kepler.conf  
 	`com.kepler.host.host.tag=kepler`  
 + 重新启动该台Server3-service   
-`此时含2台为标记服务与1台已标记服务`  
+`此时含2台已标记服务与1台已标记服务`  
 + 修改Server1-client，/client/src/test/resources/kepler.conf  
 	`com.kepler.host.host.tag=kepler`
 + 启动Server1-client测试用例，观察结果   
