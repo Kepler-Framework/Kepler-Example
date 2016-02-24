@@ -53,7 +53,7 @@ public class Client {
 		}
 		long using = System.nanoTime() - start;
 		// 完成数量 / 耗时
-		long qps = (circles / TimeUnit.SECONDS.convert(using, TimeUnit.NANOSECONDS));
+		long qps = (long) (circles / Double.valueOf(TimeUnit.MILLISECONDS.convert(using, TimeUnit.NANOSECONDS)) * 1000);
 		// 耗时 / 完成数量
 		double per = (Double.valueOf(using) / circles) / 1000 / 1000;
 		System.out.println("Using: " + using);
