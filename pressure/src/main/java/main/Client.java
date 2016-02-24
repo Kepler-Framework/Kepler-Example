@@ -46,8 +46,8 @@ public class Client {
 		for (int index = 0; index < circles; index++) {
 			executor.execute(invoker);
 		}
-		while (counter.get() != 0) {
-			synchronized (counter) {
+		synchronized (counter) {
+			while (counter.get() != 0) {
 				counter.wait();
 			}
 		}
