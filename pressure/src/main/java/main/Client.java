@@ -15,7 +15,7 @@ public class Client {
 
 	private static String build(int length) {
 		StringBuffer buffer = new StringBuffer();
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < length * 1024; i++) {
 			buffer.append("-");
 		}
 		return buffer.toString();
