@@ -8,6 +8,7 @@
 	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 	
 	<import resource="classpath:kepler-server.xml" />
+	<import resource="classpath:kepler-serial-jackson.xml" />
 	<bean id="demoService" class="com.alibaba.dubbo.demo.provider.DemoServiceImpl" />
 
 </beans>
