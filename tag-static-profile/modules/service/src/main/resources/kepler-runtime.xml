@@ -7,6 +7,8 @@
 
 	<import resource="classpath:kepler-server.xml" />
 
-	<bean class="com.kepler.impl.TestAppImpl" />
+	<bean class="com.kepler.impl.TestApp1Impl" />
+	
+	<bean class="com.kepler.impl.TestApp2Impl" />
 
 </beans>
