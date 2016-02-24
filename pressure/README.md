@@ -10,5 +10,6 @@
   + Client启动入口：`main.Client`
   + Client启动参数：
     + `输入 1 500 10 50000 表示使用Dubbo客户端，报文大小为500K，开启10个线程测试50000次`
+    + `输入 2 256 10 10000 表示使用Keler客户端，报文大小为256K，开启10个线程测试10000次`
   + Client JVM参数(推荐)：-server -Xmx1G -Xms1G -XX:+PrintGCDetails  
 + `测试时保持环境一致，关闭其他可能干扰测试结果的进程，关闭Log4j
