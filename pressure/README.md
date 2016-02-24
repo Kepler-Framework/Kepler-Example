@@ -1,4 +1,7 @@
-
++ 修改配置  
+  + @See[<a href="https://github.com/Kepler-Framework/Kepler-Example/blob/master/pressure/src/main/java/kepler.conf">Kepler.conf</a>]中ZooKeeper地址 
+  + @See[<a href="https://github.com/Kepler-Framework/Kepler-Example/blob/master/pressure/src/main/java/dubbo-provider.xml">Dubbo Provider</a>]中ZooKeeper地址
+  + @See[<a href="https://github.com/Kepler-Framework/Kepler-Example/blob/master/pressure/src/main/java/dubbo-consumer.xml">Dubbo Consumer</a>]中ZooKeeper地址
 + Server  
   + Server启动入口：`main.Server`
   + Server启动参数：`输入1，启动Dubbo服务。输入2，启动Kepler服务`
