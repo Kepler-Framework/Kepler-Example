@@ -1,0 +1,1 @@
+Client端测试完毕自动删除PID文件，测试时需要Debug
