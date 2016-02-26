@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- Local ZooKeeper -->
+	<alias name="kepler.zookeeper.context.local" alias="kepler.service.exported.zookeeper.local" />
+
+	<bean id="kepler.service.exported.chained.local" class="com.kepler.service.exported.ChainedExported">
+		<constructor-arg>
+			<list>
+				<ref bean="kepler.service.exported.context" />
+				<ref bean="kepler.service.exported.promotion" />
+				<!-- Local ZooKeeper -->
+				<ref bean="kepler.service.exported.zookeeper.local" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="kepler.service.exproted.abstract.local" abstract="true" init-method="init">
+		<constructor-arg ref="kepler.config.profile" />
+		<!-- Local ZooKeeper -->
+		<constructor-arg ref="kepler.service.exported.chained.local" />
+	</bean>
+
+	<!-- For Example -->
+	<!-- 
+		<bean class="com.kepler.service.exported.ExportedDelegate" parent="kepler.service.exproted.abstract.local"> 
+			<constructor-arg index="0" value="Your Service Interface" /> 
+			<constructor-arg index="1" ref="Your Service Instance" /> 
+			<constructor-arg index="2" value="Your Service Profile" /> 
+		</bean> 
+	-->
+
+	<!-- Local ZooKeeper -->
+	<bean id="kepler.zookeeper.factory.local" class="com.kepler.zookeeper.ZkFactory" init-method="init">
+		<constructor-arg value="127.0.0.1:2781" />
+	</bean>
+
+	<bean id="kepler.zookeeper.context.local" class="com.kepler.zookeeper.ZkContext" destroy-method="destroy">
+		<constructor-arg ref="kepler.management.status.static" />
+		<!-- Local ZooKeeper -->
+		<constructor-arg ref="kepler.zookeeper.factory.local" />
+		<constructor-arg ref="kepler.zookeeper.listener" />
+		<constructor-arg ref="kepler.config.profile" />
+		<constructor-arg ref="kepler.host.local" />
+		<constructor-arg ref="kepler.serials" />
+		<constructor-arg ref="kepler.config" />
+	</bean>
+</beans>
+
