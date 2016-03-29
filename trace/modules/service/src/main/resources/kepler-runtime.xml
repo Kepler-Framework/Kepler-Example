@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
     http://www.springframework.org/schema/util
-	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
-
-	<import resource="classpath:kepler-trace-annotation.xml" />
+	http://www.springframework.org/schema/util/spring-util-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	">
 
 	<import resource="classpath:kepler-server.xml" />
+	
+	<import resource="classpath:kepler-trace-extension.xml" />
+	
+	<context:annotation-config />
+	
 	<!-- 
 	<import resource="classpath:kepler-management-all.xml" />
 	-->
 
-	<bean class="com.kepler.impl.PrinterImpl" />
+	<bean class="com.kepler.impl.ServiceAImpl" />
+	<bean class="com.kepler.impl.ServiceBImpl" />
+	<bean class="com.kepler.impl.ServiceCImpl" />
+	<bean class="com.kepler.impl.ServiceDImpl" />
+	<bean class="com.kepler.impl.ServiceEImpl" />
+	
+	<bean id="a" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
+		<constructor-arg index="0" value="com.kepler.ServiceA" />
+	</bean>
+	
+	<bean id="b" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
+		<constructor-arg index="0" value="com.kepler.ServiceB" />
+	</bean>		
+	
+	<bean id="c" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
+		<constructor-arg index="0" value="com.kepler.ServiceC" />
+	</bean>	
+	
+	<bean id="d" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
+		<constructor-arg index="0" value="com.kepler.ServiceD" />
+	</bean>	
 
 </beans>
