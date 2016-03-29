@@ -5,9 +5,10 @@
     http://www.springframework.org/schema/util
 	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-	<import resource="classpath:kepler-server.xml" />
-	<import resource="classpath:kepler-terminal.xml" />
+	<import resource="classpath:kepler-core.xml" />
 
-	<bean class="com.kepler.impl.TestAppImpl" />
+	<bean id="test" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
+		<constructor-arg index="0" value="com.kepler.TestApp" />
+	</bean>
 
 </beans>
