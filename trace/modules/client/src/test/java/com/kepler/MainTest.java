@@ -1,5 +1,8 @@
 package com.kepler;
 
+import java.util.Arrays;
+import java.util.Random;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +14,31 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class MainTest {
 
 	@Autowired
-	private Printer printer;
+	private ServiceE service;
+
+	@Autowired
+	private ServiceA nestedService;
+
+	Random random = new Random();
 
 	@Test
-	public void test() throws Exception {
-		for (int i = 0; i < 10000; i++) {
-			System.out.println(this.printer.print("kepler", Printer.WOOD_PRINTER));
-			Thread.sleep(1000 * 1);
+	public void test_ser() throws Exception {
+		Pojo pojo = new Pojo();
+		pojo.setAge(24);
+		pojo.setName("zhangjiehao");
+		service.doE(Arrays.asList(pojo));
+
+		Complex complex = new Complex();
+		complex.setPojos(Arrays.asList(pojo));
+
+		System.in.read();
+	}
+
+	@Test
+	public void test_tracePath() throws Exception {
+		for (int i = 0; i < 100; i++) {
+			nestedService.doA();
 		}
 	}
+
 }

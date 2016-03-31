@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.kepler.demo</groupId>
@@ -10,9 +11,15 @@
 
 	<properties>
 		<maven.project.name>trace-client</maven.project.name>
+		<maven.project.jackson.version>2.4.2</maven.project.jackson.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.kepler</groupId>
+			<artifactId>kepler-trace</artifactId>
+			<version>0.0.6-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>com.kepler.demo</groupId>
 			<artifactId>trace-interface</artifactId>
@@ -38,6 +45,22 @@
 			<artifactId>spring-test</artifactId>
 			<version>${maven.project.spring.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${maven.project.jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${maven.project.jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${maven.project.jackson.version}</version>
+		</dependency>
+
 	</dependencies>
 
 </project>
