@@ -7,7 +7,7 @@ import com.kepler.annotation.Autowired;
 public class TestAppImpl implements TestApp {
 
 	private void failed(String kepler, int length) throws Exception {
-		if (kepler.length() > length) {
+		if (kepler.length() >= length) {
 			throw new RuntimeException("Failed length: " + length + " for " + kepler);
 		}
 	}
