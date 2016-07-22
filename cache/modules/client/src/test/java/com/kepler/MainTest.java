@@ -22,14 +22,14 @@ public class MainTest {
 	@Test
 	public void test1() throws Exception {
 		for (int i = 0; i < 50000; i++) {
-			System.out.println(this.test.test1("kepler"));
+			System.out.println(this.test.test1());
 		}
 	}
 
 	@Test
 	public void test2() throws Exception {
 		for (int i = 0; i < 50000; i++) {
-			System.out.println(this.test.test2("kepler"));
+			System.out.println(this.test.test2());
 		}
 	}
 
@@ -37,7 +37,7 @@ public class MainTest {
 	public void test3() throws Exception {
 		int count = 0;
 		for (int i = 0; i < 50000; i++) {
-			System.out.println(this.test.test3("kepler"));
+			System.out.println(this.test.test3());
 			if (count % 10000 == 0) {
 				this.expired.expired(new Service(TestApp.class), "test3");
 			}

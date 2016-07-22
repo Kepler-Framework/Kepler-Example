@@ -11,18 +11,18 @@ public class TestAppImpl implements TestApp {
 
 	private static final Log LOGGER = LogFactory.getLog(TestAppImpl.class);
 
-	public String test1(String kepler) throws Exception {
-		TestAppImpl.LOGGER.info("Invoke test1 ... " + kepler);
-		return "Hello world 1 " + kepler;
+	public String test1() throws Exception {
+		TestAppImpl.LOGGER.info("Invoke test1 ... ");
+		return "Hello world 1 ";
 	}
 
-	public String test2(String kepler) throws Exception {
-		TestAppImpl.LOGGER.info("Invoke test2 ... " + kepler);
-		return "Hello world 2 " + kepler;
+	public String test2() throws Exception {
+		TestAppImpl.LOGGER.info("Invoke test2 ... ");
+		return "Hello world 2 ";
 	}
 
-	public String test3(String kepler) throws Exception {
-		TestAppImpl.LOGGER.info("Invoke test3 ... " + kepler);
-		return "Hello world 3 " + kepler;
+	public String test3() throws Exception {
+		TestAppImpl.LOGGER.info("Invoke test3 ... ");
+		return "Hello world 3 ";
 	}
 }
