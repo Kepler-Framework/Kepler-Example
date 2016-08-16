@@ -7,6 +7,16 @@
 
 	<import resource="classpath:kepler-server.xml" />
 
-	<bean class="com.kepler.impl.TestAppImpl" />
+	<bean class="com.kepler.impl.TestApp1Impl" />
+
+	<bean class="com.kepler.impl.TestApp2Impl" />
+
+	<bean class="com.kepler.impl.TestApp3Impl" />
+
+	<bean class="com.kepler.impl.TestApp4Impl" />
+
+	<bean class="com.kepler.impl.TestApp5Impl" />
+
+	<bean class="com.kepler.impl.TestApp6Impl" />
 
 </beans>
