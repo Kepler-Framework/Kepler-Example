@@ -18,7 +18,7 @@ public class TestApp1Impl implements TestApp1 {
 	private static final Log LOGGER = LogFactory.getLog(TestApp1Impl.class);
 
 	@Generic
-	public User test(String param1, Date param2, long param3, UserRole param4, User param5) throws Exception {
+	public User test1(String param1, Date param2, long param3, UserRole param4, User param5) throws Exception {
 		TestApp1Impl.LOGGER.info(param1);
 		TestApp1Impl.LOGGER.info(param2);
 		TestApp1Impl.LOGGER.info(param3);
@@ -27,7 +27,7 @@ public class TestApp1Impl implements TestApp1 {
 	}
 
 	@Generic
-	public User[] test(String[] param1, Date[] param2, long[] param3, UserRole[] param4, User[] param5) throws Exception {
+	public User[] test2(String[] param1, Date[] param2, long[] param3, UserRole[] param4, User[] param5) throws Exception {
 		TestApp1Impl.LOGGER.info(Arrays.toString(param1));
 		TestApp1Impl.LOGGER.info(Arrays.toString(param2));
 		TestApp1Impl.LOGGER.info(Arrays.toString(param3));
@@ -36,7 +36,7 @@ public class TestApp1Impl implements TestApp1 {
 	}
 
 	@Generic
-	public User[] test(String[] param1, Date[] param2, Long[] param3, UserRole[] param4, User[] param5) throws Exception {
+	public User[] test3(String[] param1, Date[] param2, Long[] param3, UserRole[] param4, User[] param5) throws Exception {
 		TestApp1Impl.LOGGER.info(Arrays.toString(param1));
 		TestApp1Impl.LOGGER.info(Arrays.toString(param2));
 		TestApp1Impl.LOGGER.info(Arrays.toString(param3));
