@@ -5,8 +5,6 @@
     http://www.springframework.org/schema/util
 	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-	<import resource="classpath:kepler-server.xml" />
-
-	<bean class="com.kepler.impl.TestAppImpl" />
+	<import resource="classpath:kepler-core.xml" />
 
 </beans>

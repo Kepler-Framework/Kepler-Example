@@ -7,6 +7,10 @@
 
 	<import resource="classpath:kepler-server.xml" />
 
-	<bean class="com.kepler.impl.TestAppImpl" />
+	<bean class="com.kepler.impl.MapAppImpl" />
+
+	<bean class="com.kepler.impl.ListAppImpl" />
+
+	<bean class="com.kepler.impl.ArrayAppImpl" />
 
 </beans>

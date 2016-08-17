@@ -10,7 +10,7 @@
 
 	<properties>
 		<maven.project.name>generic-service</maven.project.name>
-		<maven.project.entry>com.kepler.main.impl.Start</maven.project.entry>
+		<maven.project.entry>com.kepler.test1.main.impl.Start</maven.project.entry>
 	</properties>
 
 	<dependencies>
@@ -64,9 +64,9 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- clean package org.codehaus.mojo:exec-maven-plugin:1.2.1:java -Dexec.mainClass=com.kepler.main.impl.Start -->
-			<!-- clean package org.codehaus.mojo:exec-maven-plugin:java -Dexec.mainClass=com.kepler.main.impl.Start -->
-			<!-- clean package exec:java -Dexec.mainClass=com.kepler.main.impl.Start -->
+			<!-- clean package org.codehaus.mojo:exec-maven-plugin:1.2.1:java -Dexec.mainClass=com.kepler.test1.main.impl.Start -->
+			<!-- clean package org.codehaus.mojo:exec-maven-plugin:java -Dexec.mainClass=com.kepler.test1.main.impl.Start -->
+			<!-- clean package exec:java -Dexec.mainClass=com.kepler.test1.main.impl.Start -->
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.5</version>

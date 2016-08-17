@@ -2,21 +2,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.kepler</groupId>
-		<artifactId>generic-parent</artifactId>
+		<artifactId>generic-arg-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
-	<artifactId>generic-service</artifactId>
+	<artifactId>generic-arg-service</artifactId>
 
 	<properties>
-		<maven.project.name>generic-service</maven.project.name>
+		<maven.project.name>generic-arg-service</maven.project.name>
 		<maven.project.entry>com.kepler.main.impl.Start</maven.project.entry>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.kepler</groupId>
-			<artifactId>generic-interface</artifactId>
+			<artifactId>generic-arg-interface</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
