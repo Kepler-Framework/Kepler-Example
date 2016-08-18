@@ -6,14 +6,15 @@
 	<packaging>jar</packaging>
 	<name>pressure</name>
 	<properties>
+		<maven.project.name>pressure</maven.project.name>
+		<maven.project.entry>main.Server</maven.project.entry>
 		<maven.project.compile.version>1.7</maven.project.compile.version>
+		<maven.project.jackson.version>2.4.2</maven.project.jackson.version>
 		<maven.project.spring.version>3.2.4.RELEASE</maven.project.spring.version>
 		<maven.project.build.sourceEncoding>UTF-8</maven.project.build.sourceEncoding>
-		<maven.project.jackson.version>2.4.2</maven.project.jackson.version>
-		<maven.project.name>pressure</maven.project.name>
 	</properties>
 	<dependencies>
-	<!-- For JSON -->
+		<!-- For JSON -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -72,15 +73,15 @@
 		</dependency>
 	</dependencies>
 	<build>
-	<finalName>${maven.project.name}</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
+		<finalName>${maven.project.name}</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
-		
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
