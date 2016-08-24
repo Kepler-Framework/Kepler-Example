@@ -9,6 +9,8 @@
 	<bean class="com.kepler.demo.MockTest1App" />
 
 	<bean class="com.kepler.demo.MockTest2App" />
+	
+	<bean class="com.kepler.demo.MyMokerContext" />
 
 	<bean id="test1" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
 		<constructor-arg index="0" value="com.kepler.TestApp1" />

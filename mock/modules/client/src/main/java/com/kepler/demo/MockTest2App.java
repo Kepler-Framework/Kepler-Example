@@ -1,10 +1,10 @@
 package com.kepler.demo;
 
 import com.kepler.TestApp2;
-import com.kepler.mock.Mocker;
+import com.kepler.mock.ServiceMocker;
 import com.kepler.protocol.Request;
 
-public class MockTest2App implements Mocker {
+public class MockTest2App implements ServiceMocker {
 
 	@Override
 	public Object mock(Request request) {
